@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { fetchTrendingDestinations } from '../api/travelAPI';
+import { fetchDestinations } from '../api/travelAPI';
 
 function About() {
   const [trendingDestinations, setTrendingDestinations] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchTrendingDestinations()
+    fetchDestinations()
       .then((data) => {
         setTrendingDestinations(data);
         setLoading(false);
@@ -60,6 +60,11 @@ function About() {
             {trendingDestinations.map((destination) => (
               <li key={destination.id} className="text-[#9C8B73]">{destination.name}</li>
             ))}
+            {/* Adding more hot destinations */}
+            <li className="text-[#9C8B73]">New York City, USA – The city that never sleeps</li>
+            <li className="text-[#9C8B73]">Rome, Italy – A journey through history</li>
+            <li className="text-[#9C8B73]">Sydney, Australia – Iconic landmarks and beaches</li>
+            <li className="text-[#9C8B73]">Cape Town, South Africa – Stunning landscapes and culture</li>
           </ul>
         )}
       </section>

@@ -1,19 +1,18 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'https://api.example.com', // Replace with the actual API base URL
+  baseURL: 'https://www.pexels.com/api/IsCZQWTj8BZ5LNjDVnFJD3ZvhyK3Ukx5reYA4xX8kTEIZG3x8TOotDnY/', // Replace with your API base URL
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// Fetch trending destinations
-export const fetchTrendingDestinations = async () => {
+export const fetchDestinations = async () => {
   try {
-    const response = await apiClient.get('/trending-destinations'); // Replace with the correct endpoint
+    const response = await apiClient.get('/destinations'); // Replace with your endpoint
     return response.data;
   } catch (error) {
-    console.error('Error fetching trending destinations:', error);
+    console.error('Error fetching destinations:', error);
     throw error;
   }
 };

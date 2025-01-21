@@ -2,20 +2,372 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #322505;
+  color: #FFFFFF;
+}
 
+/* Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Navbar */
+nav {
+  background-color: #322505;
+  color: #FFFFFF;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #FA802F;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 10rem 0;
+}
+
+/* Wondering traveler Title */
+.wondering-title {
+  font-family: 'sans-serif';
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FA802F;
+  text-align: right;
+  margin-top: 16px;
+}
+
+.weather-section {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #1c899c;
+}
+
+/* Buttons */
+button {
+  background-color: #FA802F;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.explore-button, .get-in-touch-button {
+  margin-right: 1rem; /* Add space between buttons */
+}
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.back-to-top {
+  color: #FA802F; /* Style for Back to Top link */
+  text-decoration: underline; /* Underline to look like a link */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+
+nav a:hover {
+  color: #FA802F;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 10rem 0;
+}
+
+/* Wondering traveler Title */
+.wondering-title {
+  font-family: 'sans-serif';
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FA802F;
+  text-align: right;
+  margin-top: 16px;
+}
+
+.weather-section {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #1c899c;
+}
+
+/* Buttons */
+button {
+  background-color: #FA802F;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 1rem; /* Add space between buttons */
+}
+
+button:hover {
+  background-color: #9C8B73;
+  transform: scale(1.05);
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px; /* Adjust as needed */
+  padding: 12px 24px; /* Spacing around text */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+}
+
+/* Primary button (Explore Now) */
+.btn-primary {
+  background-color: #FA802F;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #9C8B73;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Secondary button (Get in Touch) */
+.btn-secondary {
+  background-color: #9C8B73;
+  color: white;
+  margin-left: 16px; /* Space between buttons */
+}
+
+.btn-secondary:hover {
+  background-color: #FA802F;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+/* Animated Temperature Button */
+.temp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6DA095;
+  border: 2px solid #FA802F;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  animation: pulse 1.5s infinite;
+}
+
+.temp-button:hover {
+  background-color: #FA802F;
+  color: #6DA095;
+}
+
+.temp-icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Testimonials */
+.testimonials {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to new lines */
+  justify-content: space-between; /* Ensure space between testimonials */
+  margin: 2rem auto;
+}
+
+.testimonial-box {
+  background-color: #E1DF66; /* Yellow */
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  color: #285D66;
+  margin: 1rem;
+  flex: 1 1 30%; /* Allow boxes to grow equally and take up 30% of the row */
+}
+
+/* Footer */
+footer {
+  position: fixed; /* Make footer fixed */
+  bottom: 0;
+  width: 100%;
+  background-color: #322505;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1000; /* Ensure footer is above other content */
+}
+
+
+/* Page Headers */
+h1, h2 {
+  color: #FA802F;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* Forms */
+form {
+  background-color: #F3E8CA;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #322505;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #FA802F;
+  color: #FFFFFF;
+}
+
+/* About Us Page */
 .about-page {
   background-color: #F3E8CA;
   color: #322505;
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  line-height: 1.6;
+  text-align: justify;
 }
+
 .about-page h1 {
   color: #FA802F;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
+
 .about-page ul li {
   color: #9C8B73;
+}
+
+/* Trip Planner Page */
+.trip-planner-page {
+  background-color: #F3E8CA;
+  color: #322505;
+  padding: 2rem;
+}
+
+.trip-planner-page h1 {
+  color: #FA802F;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.trip-planner-form {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.trip-planner-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.trip-planner-form input,
+.trip-planner-form textarea,
+.trip-planner-form button {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  border: 1px solid #322505;
+  border-radius: 4px;
+}
+
+.trip-planner-form button {
+  background-color: #FA802F;
+  color: #FFFFFF;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 8px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .trip-planner-form {
+    padding: 1rem;
+  }
 }
